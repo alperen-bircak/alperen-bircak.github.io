@@ -7,7 +7,7 @@ const CVPage = () => {
   const renderList = (skills, { mainClass }) => {
     return (<ul className={mainClass}>
       {skills.map((item) => {
-        if (typeof item === 'string') {
+        if (typeof item === 'string' || React.isValidElement(item)) {
           return (<li>{item}</li>);
         } else if (Array.isArray(item)) {
           return renderList(item, { mainClass: `${mainClass}-child` });

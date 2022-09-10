@@ -1,3 +1,5 @@
+import React from "react";
+
 const CVData = {
   intro: {
     name: 'Alperen',
@@ -49,14 +51,16 @@ const CVData = {
   },
   experience: {
     main: [
-      'Currently working as a full-stack developer at Lonca, which is an online marketplace that has an in-house developed website. Notable achievements include:',
+      <>
+      Currently working as a full-stack developer at <a href={`https://lonca.co`}>Lonca.co</a>, which is an online marketplace that has an in-house developed website. Notable achievements include:
+      </>,
       [
         'Redesigning and developing the mobile experience of the website.',
         'Designing and fully implementing favorite and sample order functionalities.',
         'Implementing a ranking algorithm to diversify brand representation and increase product engagement.',
         'Creating an in-house tool to facilitate preparation of orders.',
       ],
-      'A six week internship in Proline, at which led the development of an admin panel and backend for an employee management system.',
+      <>A six week internship in <a href="https://pro-line.com.tr/">Proline</a>, at which led the development of an admin panel and backend for an employee management system.</>,
       'Winner of Most Creative Hack category at Local Hack Day, 2018',
       'Organization Member and Presenter in Boğaziçi Tech-Summit, 2019',
       'Attended various Model United Nations conferences through 2014-2017, in which achieved two Best Delegate, four Outstanding Delegate and several Honorable Mentions.',
