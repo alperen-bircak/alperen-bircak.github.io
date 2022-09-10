@@ -85,4 +85,6 @@ const CVPage = () => {
   )
 }
 
+export const Head = () => <title>My CV</title>
+
 export default CVPage;
