@@ -49,7 +49,7 @@ const CVPage = () => {
           <h2>Contact<br />Information</h2>
           <ul>
             <li><span>Address:</span>{CVData.contact.address}</li>
-            <li><span>Phone:</span><a href={`tel:${CVData.contact.phone.replace(' ',)}`}>{CVData.contact.phone}</a></li>
+            {/* {<li><span>Phone:</span><a href={`tel:${CVData.contact.phone.replace(' ','')}`}>{CVData.contact.phone}</a></li>} */}
             <li><span>E-mail:</span><a href={`mailto:${CVData.contact.email}`}>{CVData.contact.email}</a></li>
             <li><span>LinkedIn:</span><a href={`https://${CVData.contact.linkedIn}`}>{CVData.contact.linkedIn}</a></li>
           </ul>

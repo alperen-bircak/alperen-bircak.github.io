@@ -7,7 +7,7 @@ const CVData = {
   },
   contact: {
     address: 'Rumeli Hisarı Mah., Cami Sk., No:4, Boğaziçi Apt., Kat:2 Daire:2, Sarıyer/İSTANBUL',
-    phone: '+90 539 784 25 66',
+    phone: 'its not smart to make your phone public',
     email: 'bircakalperen@gmail.com',
     linkedIn: 'linkedin.com/in/alperen-bircak'
   },
