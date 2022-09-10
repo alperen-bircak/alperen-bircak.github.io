@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkalperen_bircak_cv=self.webpackChunkalperen_bircak_cv||[]).push([[678],{6558:function(e,n,l){l.r(n),l.d(n,{Head:function(){return t}});var r=l(7294);n.default=function(){return r.createElement("main",null,r.createElement("h1",null,"Hello World!"))};var t=function(){return r.createElement("title",null,"Index Page")}}}]);
+//# sourceMappingURL=component---src-pages-index-js-be2fa9f460a533a36b62.js.map
