@@ -1,12 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: `alperen-bircak-cv`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `Alperen Bircak CV`,
+    siteUrl: `https://www.alperen-bircak.github.io`
   },
-  plugins: ["gatsby-plugin-sass", "gatsby-plugin-sitemap", {
-    resolve: 'gatsby-plugin-manifest',
-    options: {
-      "icon": "src/images/icon.png"
-    }
-  }]
+  plugins: ["gatsby-plugin-sass",
+    "gatsby-plugin-sitemap",
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`, {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        "icon": "src/images/icon.png"
+      }
+    }]
 };

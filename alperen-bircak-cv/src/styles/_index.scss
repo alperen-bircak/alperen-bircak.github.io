@@ -16,4 +16,17 @@ html {
 
 } 
 
+.mobile-only {
+  display: none;
+  @media screen and (max-width: 998px) {
+    display: contents;    
+  }
+}
+.non-mobile {
+  display: contents;
+  @media screen and (max-width: 998px) {
+    display: none;    
+  }
+}
+
 

@@ -1,6 +1,7 @@
 import React from "react";
 import CVData from "../../data/CVData";
 import './CVPage.scss';
+import QR from "../../images/cvqr.png"
 
 const CVPage = () => {
   const renderList = (skills, { mainClass }) => {
@@ -19,11 +20,23 @@ const CVPage = () => {
   }
   return (
     <div className="cv-container">
+      <span className="non-mobile">
+        <div className="cv-qr-container">
+          <span>
+            This CV was built as a website <br />
+            Scan the QR to view it on your browser
+          </span>
+          <div>
+            <img src={QR} height={100} width={100} alt='QR Code for the website'/>
+          </div>
+        </div>
+      </span>
       <div className="cv-grid">
         <div className="intro">
           <div className="name">
             <h1>
               {CVData.intro.name}<br />
+
               {CVData.intro.surName}
             </h1>
             <h2>{CVData.intro.title}</h2>
