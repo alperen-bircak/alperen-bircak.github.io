@@ -39,7 +39,7 @@ const CVData = {
         'Database Design'
       ],
       "Moderate experience with game engines Unity and Godot.",
-      'Experienced with linux based operating systems, can use command line tools such as git, npm and yarn.',
+      'Experienced with linux based operating systems. Can utilize command line tools such as git, npm and yarn.',
       'Good communicator and a team player.'
     ],
     languages: [
