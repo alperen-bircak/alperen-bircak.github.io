@@ -1,0 +1,10 @@
+@use 'var';
+
+#root {
+  font-family: sans-serif;
+}
+
+html {
+  background-color: var.$background-color;
+
+} 

@@ -1,0 +1,49 @@
+@use '../../styles/var';
+
+.a4-container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+
+  .a4-layout {
+    display: block;
+    //A4Sizes
+    width: var.$page-width;
+    height: calc(var.$page-width*1.4142);
+    margin-top: 2rem;
+
+    @media screen and (max-width: var.$page-width) {
+      width: 100%;
+      height: min-content;
+      margin: 0.5rem;
+    }
+
+
+    background-color: white;
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
+
+  }
+}
+
+//for printing 
+@media print {
+  body {
+    margin: 0;
+    height: 100%;
+  }
+  #root {
+    height: 100%;
+  }
+  html {
+    height: 100%;
+  }
+  
+  .a4-container {
+    .a4-layout {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
