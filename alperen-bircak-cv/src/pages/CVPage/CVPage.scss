@@ -16,6 +16,30 @@ $grid-line: $grid-thickness solid $grid-color;
   height: 100%;
   width: 100%;
   background-color: $grid-color;
+  position: relative;
+
+  .cv-qr-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    padding: 0.5em;
+    span {
+      font-size: 0.8em;
+      text-align: right;
+      opacity: 40%;
+      padding-right: 0.5em;
+    }
+    div {
+      height: 6em;
+      width: 6em;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
 
   .cv-grid {
     height: 100%;
@@ -28,6 +52,7 @@ $grid-line: $grid-thickness solid $grid-color;
       'ski exp exp';
     grid-column-gap: $grid-thickness;
     grid-row-gap: calc(2*$grid-thickness);
+
 
     .intro {
       background-color: $cell-color;
@@ -88,18 +113,7 @@ $grid-line: $grid-thickness solid $grid-color;
             margin-right: 1em;
           }
 
-          a {
-            color: black;
-            transition: color 0.1s;
-
-            &:hover {
-              color: var.$gray-color;
-            }
-
-            @media print {
-              text-decoration: none;
-            }
-          }
+         
         }
       }
     }

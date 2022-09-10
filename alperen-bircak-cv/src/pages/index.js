@@ -17,4 +17,3 @@ const IndexPage = () => {
 
 export default IndexPage
 
-export const Head = () => <title>Index Page</title>
