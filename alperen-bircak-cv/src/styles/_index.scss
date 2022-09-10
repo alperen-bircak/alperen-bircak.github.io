@@ -1,10 +1,19 @@
 @use 'var';
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: var.$text-color;
+  font-size: 18px;
+  
 
-#root {
-  font-family: sans-serif;
+}
+
+*, *::after, *::before { 
+  box-sizing: border-box 
 }
 
 html {
   background-color: var.$background-color;
 
 } 
+
+

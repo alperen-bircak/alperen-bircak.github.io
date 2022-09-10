@@ -1,5 +1,251 @@
+@use "../../styles/var";
+$grid-color: var.$gray-color;
+$cell-color: white;
+$grid-thickness: 0.2em;
+$grid-line: $grid-thickness solid $grid-color;
+
+/*
+    The absence of px measurements in this file is due to px being dependent on the dpi,
+  which is different on different screens which would cause the print of the page to
+  differ from device to device, which is very undesirable. Using em for measurement allows us to optimize
+  for print media, which is one of the goals for this page.
+*/
+
 .cv-container {
 
+  height: 100%;
+  width: 100%;
+  background-color: $grid-color;
+
   .cv-grid {
-  } 
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 0.8fr 2fr;
+    grid-template-rows: 1fr 2.5fr;
+    grid-template-areas:
+      'int int con'
+      'ski exp exp';
+    grid-column-gap: $grid-thickness;
+    grid-row-gap: calc(2*$grid-thickness);
+
+    .intro {
+      background-color: $cell-color;
+      grid-area: int;
+      display: flex;
+      justify-content: stretch;
+      flex-direction: column;
+
+      .name {
+        flex: 1 0 0;
+        border-bottom: $grid-line;
+        text-align: left;
+        display: flex;
+        justify-content: end;
+        flex-direction: column;
+        padding: 0 0 2em 3em;
+
+        h1 {
+          text-transform: uppercase;
+        }
+
+        h2 {
+          font-size: 1.1em;
+          text-transform: uppercase;
+          letter-spacing: 0.6em;
+          font-weight: 300;
+          margin-top: 0.5em;
+        }
+      }
+
+      .description {
+        flex: 0 0 0;
+        padding: 0 1em 0 3em;
+      }
+    }
+
+    .contact {
+      background-color: $cell-color;
+      grid-area: con;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 1.5em;
+
+      h2 {
+        text-transform: uppercase;
+      }
+
+      ul {
+        padding-left: 0;
+        list-style: none;
+
+        li {
+          margin: 1em 0;
+
+          span {
+            font-weight: 600;
+            margin-right: 1em;
+          }
+
+          a {
+            color: black;
+            transition: color 0.1s;
+
+            &:hover {
+              color: var.$gray-color;
+            }
+
+            @media print {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+
+    .skills {
+      background-color: $cell-color;
+      grid-area: ski;
+      padding: 1em 0.5em 0 1em;
+      font-size: 1.1em;
+
+      h2 {
+        text-transform: uppercase;
+      }
+
+      .main-skills {
+        ul {
+          li:not(:first-child) {
+            margin: 0.5em 0;
+          }
+        }
+
+        .skills-lst {
+          ul {
+            li {
+              margin: 0;
+            }
+
+            li:first-child {
+              margin-top: 0.5em;
+            }
+          }
+        }
+      }
+
+      .languages {
+        margin-top: 2em;
+        text-align: center;
+
+        h3 {
+          text-transform: capitalize;
+        }
+
+        ul {
+          list-style: none;
+          padding: 0;
+        }
+
+        .languages-container {
+          width: 100%;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: repeat(auto-fill, 1fr);
+
+          li:not(:first-child) {
+            opacity: 40%;
+          }
+        }
+
+      }
+    }
+  }
+
+  .experience {
+    background-color: $cell-color;
+    grid-area: exp;
+    padding: 1em 0 0 1em;
+    font-size: 1.1em;
+
+    h2 {
+      text-transform: uppercase;
+    }
+
+    .main-exp {
+      ul {
+        li:not(:first-child) {
+          margin: 0.5em 0;
+        }
+      }
+
+      .experiences-lst {
+        ul {
+          li {
+            margin: 0;
+          }
+
+          li:first-child {
+            margin-top: 0.5em;
+          }
+        }
+
+      }
+    }
+
+    .education {
+
+      h3,
+      h4 {
+        margin: 0;
+      }
+      h4 {
+        font-weight: 100;
+        margin: 0.4em 0;
+        font-style: italic;
+      }
+      .notes {
+        opacity: 50%;
+        font-size: 0.8em;
+        &::before {
+          content: '*';
+          margin: 0 0.2em;
+        }
+      }
+
+      ul {
+        padding: 0;
+        list-style: none;
+        ul {
+          list-style: circle;
+          padding-left: 1em;
+        }
+        .education-item {
+          margin: 1em 0;
+        }
+      }
+
+
+    }
+
+    .hobbies {
+      text-align: center;
+      margin-top: 2em;
+
+      .hobbies-lst {
+        list-style: none;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        padding: 0;
+        margin: 0.2em 0;
+
+        li {
+          padding: 0.5em 1em;
+        }
+      }
+
+    }
+
+  }
 }
