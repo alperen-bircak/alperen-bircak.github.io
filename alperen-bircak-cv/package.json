@@ -12,7 +12,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    "deploy": "gatsby build --prefix-paths && rm -rf node_modules/.cache/gh-pages && gh-pages -d public -f",
+    "help": "gh-pages --help"
   },
   "dependencies": {
     "gatsby": "^4.22.1",
