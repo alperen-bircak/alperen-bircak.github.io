@@ -24,12 +24,14 @@ $grid-line: $grid-thickness solid $grid-color;
     right: 0;
     display: flex;
     padding: 0.5em;
+
     span {
       font-size: 0.8em;
       text-align: right;
       opacity: 40%;
       padding-right: 0.5em;
     }
+
     div {
       height: 6em;
       width: 6em;
@@ -52,13 +54,14 @@ $grid-line: $grid-thickness solid $grid-color;
       'ski exp exp';
     grid-column-gap: $grid-thickness;
     grid-row-gap: calc(2*$grid-thickness);
+
     @media screen and (max-width: 998px) {
       grid-template-columns: 100%;
       grid-template-rows: repeat(4, min-content);
 
       grid-template-areas:
         'int'
-        'con' 
+        'con'
         'ski'
         'exp';
     }
@@ -68,7 +71,7 @@ $grid-line: $grid-thickness solid $grid-color;
       background-color: $cell-color;
       grid-area: int;
       display: flex;
-      justify-content: stretch; 
+      justify-content: stretch;
       flex-direction: column;
 
       .name {
@@ -123,7 +126,7 @@ $grid-line: $grid-thickness solid $grid-color;
             margin-right: 1em;
           }
 
-         
+
         }
       }
     }
@@ -131,8 +134,11 @@ $grid-line: $grid-thickness solid $grid-color;
     .skills {
       background-color: $cell-color;
       grid-area: ski;
-      padding: 1em 0.5em 0 1em;
+      padding: 1em 0.5em 1em 1em;
       font-size: 1.1em;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
 
       h2 {
         text-transform: uppercase;
@@ -159,7 +165,7 @@ $grid-line: $grid-thickness solid $grid-color;
       }
 
       .languages {
-        margin-top: 2em;
+        margin: 2em 0;
         text-align: center;
 
         h3 {
@@ -189,8 +195,11 @@ $grid-line: $grid-thickness solid $grid-color;
   .experience {
     background-color: $cell-color;
     grid-area: exp;
-    padding: 1em 0.5em 0 1em;
+    padding: 1em 0.5em 2em 1em;
     font-size: 1.1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     h2 {
       text-transform: uppercase;
@@ -223,14 +232,17 @@ $grid-line: $grid-thickness solid $grid-color;
       h4 {
         margin: 0;
       }
+
       h4 {
         font-weight: 100;
         margin: 0.4em 0;
         font-style: italic;
       }
+
       .notes {
         opacity: 50%;
         font-size: 0.8em;
+
         &::before {
           content: '*';
           margin: 0 0.2em;
@@ -240,10 +252,12 @@ $grid-line: $grid-thickness solid $grid-color;
       ul {
         padding: 0;
         list-style: none;
+
         ul {
           list-style: circle;
           padding-left: 1em;
         }
+
         .education-item {
           margin: 1em 0;
         }
