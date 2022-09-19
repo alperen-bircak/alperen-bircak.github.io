@@ -1,9 +1,12 @@
 @use 'var';
+
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: var.$text-color;
   font-size: 18px;
-  
+  margin: 0; 
+  height: 100%;
+  background-color: pink;
 
 }
 
@@ -13,8 +16,14 @@ body {
 
 html {
   background-color: var.$background-color;
-
+  height: 100%;
 } 
+#___gatsby {
+  height: 100%;
+}
+#gatsby-focus-wrapper {
+  height: 100%;
+}
 
 .mobile-only {
   display: none;

@@ -6,6 +6,7 @@ module.exports = {
   plugins: ["gatsby-plugin-sass",
     "gatsby-plugin-sitemap",
     `gatsby-plugin-image`,
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`, {
       resolve: 'gatsby-plugin-manifest',
