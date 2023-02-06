@@ -5,7 +5,7 @@ const CVData = {
     name: 'Alperen',
     surName: 'Bırçak',
     title: 'Computer Engineering Undergraduate',
-    description: 'A Computer Engineering student at Boğaziçi University and an aspiring full-stack engineer.  Pursuing further real-life experience and looking to develop practical software engineering skills. Enthusiastic about contributing to software projects and working together with a team. Has experience with front-end and back-end web development using a MERN stack, fast learner, good communication skills, variety of other development skills including: Java, C++, C#, C, PHP and Python.'
+    description: 'A Computer Engineering student at Boğaziçi University, an aspiring full-stack engineer, amateur game developer.  Pursuing further real-life experience and looking to develop practical software engineering skills. Enthusiastic about contributing to software projects and working together with a team. Has experience with front-end and back-end web development using a MERN stack, fast learner, good communication skills, variety of other development skills including: Java, C++, C#, C, PHP and Python.'
   },
   contact: {
     address: 'Rumeli Hisarı Mah., Cami Sk., No:4, Boğaziçi Apt., Kat:2 Daire:2, Sarıyer/İSTANBUL',
@@ -30,6 +30,8 @@ const CVData = {
         'Axios',
         'Sass'
       ],
+      "Experience with game engines Unity and Godot.",
+      "Game development skills including AI development and vector math.",
       'Additional experience with web development using a Vue 3 & Spring Boot based stack.',
       'Confident and comfortable with CSS and semantic HTML.',
       'Experience programming with Java, C++, C#, C, PHP and Python.',
@@ -40,7 +42,6 @@ const CVData = {
         'Data Structures and Algorithms',
         'Database Design'
       ],
-      "Moderate experience with game engines Unity and Godot.",
       'Experienced with linux based operating systems. Can utilize command line tools such as git, npm and yarn.',
       'Good communicator and a team player.'
     ],
@@ -52,7 +53,7 @@ const CVData = {
   experience: {
     main: [
       <>
-      Currently working as a full-stack developer at <a href={`https://lonca.co`}>Lonca.co</a>, which is an online marketplace that has an in-house developed website. Notable achievements include:
+      Worked as a full-stack developer at <a href={`https://lonca.co`}>Lonca.co</a>, which is an online marketplace that has an in-house developed website. Notable achievements include:
       </>,
       [
         'Redesigning and developing the mobile experience of the website.',
